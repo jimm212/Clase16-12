@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+<body>
+    <h1>LOGIN</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" placeholder="Nombre de usuario" required>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" name="password" placeholder="Contraseña" required>
+
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+
+    <a href="{% url 'recuperar_password' %}">Haz olvidado tu contraseña</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONFIRMACIÓN DE RECUPERACIÓN</title>
+</head>
+<body>
+    <h1>Recuperación de contraseña</h1>
+    <p>Hola, {{ user.get_username }} </p>
+
+    <p>Haz clic en el siguiente enlace para restablecer tu contraseña</p>
+    <p><a href="{{protocol}}://{{domain}}{{url}}"></a></p>
+    <p>Si no realizaste esta solicitud ignora el mensaje</p>
+    
+    <p>Este enlace expirará en 24 horas.</p>
+
+    <p>Cualquier duda o consulta contacte al administrador</p>
+    <p>Atentamente,</p>
+    <p>El equipo de soporte</p>
+</body>
+</html>

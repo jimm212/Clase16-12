@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO</title>
+</head>
+<body>
+    <h1>REGISTRO DE USUARIOS</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <input type="text" name="username" id="username" placeholder="Nombre de Usuario" required><br>
+            <input type="email" name="email" id="email" placeholder="Correo" required> <br>
+            <input type="password" name="password" id="password" placeholder="Contraseña" required> <br>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmar Contraseña" required> <br>
+        </div>
+        <button type="submit" class="btn">Registrar Usuario</button>
+    </form>
+
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+</body>
+</html>
